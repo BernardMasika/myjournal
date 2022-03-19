@@ -16,7 +16,7 @@
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #CFCFCF;
   justify-content: center;
   align-items: center;
 }
@@ -25,17 +25,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  margin-left: 0.75rem;
+  /*flex-grow: 1;*/
 }
 
 .title a {
   color: #0070f3;
   text-decoration: none;
+  pointer-events: none;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
   text-decoration: underline;
 }
 
@@ -51,15 +53,20 @@
 }
 
 .description {
-  margin: 4rem 0;
+  margin: 2rem 0 2rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
+  width: 55%;
+
 }
 
+
+
 .code {
-  background: #fafafa;
+  background: #E4E4E4;
   border-radius: 5px;
-  padding: 0.75rem;
+  padding: 1rem;
+
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
@@ -79,7 +86,7 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid #CFCFCF;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
@@ -103,14 +110,40 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
 
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .description {
+    width: 90%;
+  }
+  .menuItem {
+    text-wrap: normal;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 767px) {
+  .allPostHeader {
+    width: 80%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .allPostHeader {
+    width: 50%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .allPostHeader {
+    width: 50%;
   }
 }
