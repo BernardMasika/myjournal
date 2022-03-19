@@ -25,7 +25,7 @@ const PostPage = ({ post}) => {
 
 export default PostPage;
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
     const PostRes = await axios.get(`https://lr6cs0jv.directus.app/items/post/${params.id}`)
     // console.log('single post', PostRes)
 
