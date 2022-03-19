@@ -75,7 +75,7 @@ export default function Home({posts}) {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const PostRes = await axios.get("https://lr6cs0jv.directus.app/items/post/")
 
     // console.log('the res', PostRes.data)
